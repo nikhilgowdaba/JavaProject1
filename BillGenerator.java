@@ -6,7 +6,7 @@ public class BillGenerator {
     String email;
     String[][] products;
 
-    // Constructor to initialize buyer info and products
+
     public BillGenerator(String name, String address, String contact, String email, String[][] products) {
         this.buyerName = name;
         this.buyerAddress = address;
@@ -15,7 +15,7 @@ public class BillGenerator {
         this.products = products;
     }
 
-    // Method to print the bill
+ 
     public void generateBill() {
         int subtotal = 0;
 
@@ -25,7 +25,7 @@ public class BillGenerator {
         System.out.println("Contact: " + contact);
         System.out.println("Email:   " + email);
         System.out.println("----------------------------------------");
-        System.out.printf("%-25s %-20s %-20s %-20s\n", "Product", "Qty", "Unit", "Total");
+        System.out.printf("%-15s %-10s %-10s %-10s\n", "Product", "Qty", "Unit", "Total");
 
         for (String[] item : products) {
             String name = item[0];
@@ -45,7 +45,7 @@ public class BillGenerator {
         System.out.println("Payment Method: UPI");
     }
 
-    // Main method to run the program
+
     public static void main(String[] args) {
         String[][] products = {
             {"Laptop", "1", "50000"},
